@@ -1,0 +1,248 @@
+/* ===== Base ===== */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2124;
+    color: #E8E6E1;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, nav a {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ===== Header (terminal window style) ===== */
+header {
+    background-color: #262A2E;
+    color: #E8E6E1;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid #2a906e;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: #ffa190;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #2A906E, 40px 0 0 #E85454;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2em;
+    color: #2A906E;
+}
+
+header p {
+    margin: 8px 0 15px 0;
+    color: #8A8F94;
+    font-style: italic;
+}
+
+/* ===== Navigation ===== */
+nav a {
+    color: #E8E6E1;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.95em;
+}
+
+nav a::before {
+    content: "> ";
+    color: #2A906E;
+}
+
+nav a:hover {
+    color: #2A906E;
+}
+
+/* ===== Main content ===== */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #262A2E;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-left: 3px solid #2A906E;
+}
+
+h2 {
+    color: #2A906E;
+    font-size: 1.3em;
+}
+
+h2::before {
+    content: "// ";
+    color: #8A8F94;
+}
+
+h3 {
+    color: #ffa190;
+    font-size: 1.05em;
+}
+
+article {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #383C40;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+a {
+    color: #2A906E;
+}
+
+a:hover {
+    color: #ffa190;
+}
+
+/* ===== Images ===== */
+img {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #383C40;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border-right: 1px solid #383C40;
+    border-bottom: 1px solid #383C40;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+th {
+    background-color: #1E2124;
+    color: #2A906E;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #232629;
+}
+
+tbody tr:hover {
+    background-color: #2C3034;
+}
+
+/* ===== Form ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    color: #8A8F94;
+    font-size: 0.9em;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #383C40;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: #1E2124;
+    color: #E8E6E1;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2A906E;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #2A906E;
+    color: #1E2124;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+button:hover {
+    background-color: #ffa190;
+}
+.intro-flex {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-photo {
+    flex-shrink: 0;
+    width: 225px;
+}
+
+.intro-photo img {
+    width: 225px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0;
+    border: 2px solid #2A906E;
+}
+
+@media (max-width: 600px) {
+    .intro-flex {
+        flex-direction: column;
+    }
+    .intro-photo {
+        width: 100%;
+        align-self: center;
+    }
+}
